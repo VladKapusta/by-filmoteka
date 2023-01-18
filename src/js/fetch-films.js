@@ -8,7 +8,7 @@ export default class fatchFilms {
   }
 
   searchPopularFilms() {
-    return fetch(`${this.API}movie/popular/?api_key=${this.API_KEY}&page=${this.page}`).then(res =>
+    return fetch(`${this.API}trending/movie/day?api_key=${this.API_KEY}&page=${this.page}`).then(res =>
       res.json()
     );
   }
