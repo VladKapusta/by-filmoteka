@@ -1,0 +1,33 @@
+.footer {
+  background-color: #f7f7f7;
+}
+.footer__content {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.footer__about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  > :not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.footer__heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 12px;
+}
+.about__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}

@@ -1,0 +1,11 @@
+.lib__button {
+   margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    .header__button{
+        padding: 5px 10px;
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+}

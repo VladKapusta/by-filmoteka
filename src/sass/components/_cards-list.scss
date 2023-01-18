@@ -1,0 +1,82 @@
+.main {
+  padding: 20px 0 40px;
+}
+.cards__list {
+  > :not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+// .cards__item {
+
+// }
+.film {
+  margin-top: 10px;
+  line-height: 14px;
+  color: #000000;
+}
+.film__titel {
+    margin-top: 10px;
+}
+.film__name{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+}
+.film__pre-info {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 5px;
+  color: #ff6b08;
+  :not(:last-child) {
+    margin-right: 5px;
+    
+  }
+}
+
+//=========================================button page list
+.pages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+.page__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    :not(:last-child) {
+        margin-right: 16px;
+    }
+}
+.page__link {
+    display: block;
+}
+.page__link--current, .btn-page-curr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+    background-color: #ff6b08;
+    border-radius: 5px;
+}
+.page__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+
+    &:hover,:focus {
+        color: #ffffff;
+        background-color: #ff6b08;
+        border-radius: 5px;
+    }
+}
+.page__button-end{
+  opacity: 0;
+  pointer-events: none;
+}
