@@ -4,7 +4,6 @@ export default class fatchFilms {
     this.API_KEY = 'f337b3367ff87f6c35f27ef8641676b2';
     this.page = 1;
     this.id = '';
-    // this.URL = `${this.API}?api_key=${this.API_KEY}&page=${this.page}`;
   }
 
   searchPopularFilms() {
