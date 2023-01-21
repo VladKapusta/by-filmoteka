@@ -3,6 +3,7 @@ import { refs } from './refs';
 refs.closeModal.addEventListener('click', onCloseBtn);
 function onCloseBtn() {
   refs.modal.classList.add('is-hidden');
+  refs.body.style.overflow = 'visible'
 }
 
 // refs.buttons.addEventListener('click', onButtonAddLocalHost);

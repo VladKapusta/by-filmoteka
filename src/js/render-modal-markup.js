@@ -17,6 +17,7 @@ async function onCardItem(e) {
   }
   renderModal(filmToId);
 
+  refs.body.style.overflow = 'hidden'
   refs.modal.classList.remove('is-hidden');
   const modalBtn = document.querySelector('.modal__buttons');
   modalBtn.addEventListener('click', onButtonAddLocalStorege);
@@ -47,11 +48,13 @@ function renderModal({
     .slice(0, 3)
     .join(', ');
 
-  const markupCardFilm = `
+  const markupCardFilm = `<div class="modal__wrrap-poster">
       <img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="" class="modal__poster" width="240" height="357">
     </div>
-    <h2 class="modal__titel">${original_title}</h2>
+    
     <div class="modal__info-film">
+    <h2 class="modal__titel">${original_title}</h2>
+      <div class="aaa">
       <ul class="modal__info-list">
           <li class="modal__info-item">
               <p class="modal__vote">Vote / Votes</p>
@@ -79,16 +82,17 @@ function renderModal({
           <li class="modal__value-item">
               <p class="value-genre">${genr} </p>
           </li>
-      </ul>
-    </div>
-    <div class="modal__about">
+      </ul></div>
+      <div class="modal__about">
       <h2 class="modal__about-titel">About</h2>
       <p class="modal__about-text">${overview}</p>
     </div>
     <div class="modal__buttons">
-            <button class="modal__button button-watched">add to watched</button>
-            <button class="modal__button button-queue">add to queue</button>
-    </div>`;
+      <button class="modal__button button-watched">add to watched</button>
+      <button class="modal__button button-queue">add to queue</button>
+      </div> 
+    </div>
+    `;
 
   refs.modalInform.innerHTML += markupCardFilm;
 }

@@ -1,4 +1,5 @@
 const refs = {
+  body: document.querySelector('body'),
   cardsList: document.querySelector('.cards__list'),
   cardsItem: document.querySelector('.cards__item'),
   modal: document.querySelector('.backdrop'),

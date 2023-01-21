@@ -1,7 +1,14 @@
 .header {
   padding: 40px 20px 90px;
-  background-image: url(../imges/bg-mob.jpg);
+  background-image: url(../imges/mob.png);
+  background-size: cover;
   color: #ffffff;
+  
+  @media screen and (min-width: 768px) {
+    padding: 40px 32px 80px;
+    background-image: url(../imges/tablet.png);
+    background-size: cover;
+  }
 }
 .header__nav {
   display: flex;
@@ -14,9 +21,21 @@
   align-items: center;
   width: 24px;
   height: 24px;
+
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+}
+.logo-text {
+  display: none;
+  @media screen and (min-width: 480px) {
+    display: inline-block;
+    margin-left: 8px;
+  }
 }
 .nav__list {
   display: flex;
+  align-items: center;
 }
 .nav__item {
   font-size: 12px;
@@ -41,7 +60,16 @@
 
 .serch-films {
   position: relative;
-  margin-top: 57px;
+  margin: 0 auto;
+  margin-top: 55px;
+
+  width: 280px;
+
+  @media screen and (min-width: 480px) {
+    width: 340px;
+    margin-top: 40px;
+  }
+
   &::after {
     content: '';
     width: 100%;

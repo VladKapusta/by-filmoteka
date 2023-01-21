@@ -1,40 +1,13 @@
-import { refs } from './refs';
-import fatchFilms from './fetch-films';
-import genre from './genre';
+// import renderFilmCards from "./render-popular-film";
+// import fatchFilms from './fetch-films';
+// import { refs } from './refs';
 
-refs.btnNextPage.addEventListener('click', onNextPage);
-refs.btnEndPage.addEventListener('click', onEndPage);
-refs.listBtnPages.addEventListener('click', onBtnNumbPage);
+// const featchFilms = new fatchFilms();
 
-const featchFilms = new fatchFilms();
 
-async function renderFilmCards() {
-  const films = await featchFilms.searchPopularFilms();
-
-  const markupPopularFilms = films.results
-    .map(({ original_title, genre_ids, release_date, poster_path, id }) => {
-      return ` <li class="cards__item" data-id="${id}">
-      <div class="film">
-        <div class="poster__wrraper">
-        <img src="https://image.tmdb.org/t/p/w500${poster_path}" alt="" class="poster" width="320">
-        </div>
-        <div class="film__titel">
-        <h2 class="film__name">${original_title}</h2>
-        <div class="film__pre-info">
-        <p class="film__gener">${genre(genre_ids)}</p>
-        <span>|</span>
-        <p class="film__reliz">${release_date.slice(0, 4)}</p>
-        </div>
-        </div>
-        </div>
-        </li>`;
-    })
-    .join(' ');
-  refs.cardsList.innerHTML = '';
-  refs.cardsList.innerHTML += markupPopularFilms;
-}
-renderFilmCards();
-// =============================
+// refs.btnNextPage.addEventListener('click', onNextPage);
+// refs.btnEndPage.addEventListener('click', onEndPage);
+// refs.listBtnPages.addEventListener('click', onBtnNumbPage);
 
 function onNextPage() {
   featchFilms.pageIncr();
@@ -120,3 +93,5 @@ function onBtnNumbPage(e) {
     return
   }
 }
+
+
